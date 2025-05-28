@@ -55,6 +55,11 @@ export default function Home() {
         <Oscar>
           <Heading>Imran will shine! O Yeah!🚀</Heading>
         </Oscar>
+
+        <Greet
+          name="test"
+          isLoggedIn={true}
+        />
       </section>
     </main>
   )
