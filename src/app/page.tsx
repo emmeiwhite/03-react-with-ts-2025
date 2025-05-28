@@ -1,5 +1,6 @@
 import Greet from './components/Greet'
 import Heading from './components/Heading'
+import Oscar from './components/Oscar'
 import Person from './components/Person'
 import PersonList from './components/PersonList'
 import Status from './components/Status'
@@ -50,6 +51,10 @@ export default function Home() {
         <Status status="loading" />
 
         <Heading>Placeholder text</Heading>
+
+        <Oscar>
+          <Heading>Imran will shine! O Yeah!🚀</Heading>
+        </Oscar>
       </section>
     </main>
   )
