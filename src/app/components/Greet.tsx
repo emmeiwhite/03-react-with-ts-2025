@@ -6,14 +6,14 @@ type GreetProps = {
 
 const Greet = (props: GreetProps) => {
   return (
-    <div className="text-center">
+    <div>
       {props.isLoggedIn ? (
         <p>
           Welcome <span className="font-semibold">{props.name}</span>. You have {props.messageCount}{' '}
           unread messages
         </p>
       ) : (
-        <p className="font-bold">Welcome Guest</p>
+        <p>Welcome Guest</p>
       )}
     </div>
   )
