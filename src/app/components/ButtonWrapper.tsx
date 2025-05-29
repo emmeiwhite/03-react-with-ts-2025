@@ -2,8 +2,12 @@
 import Button from './Button'
 import Button2 from './Button2'
 import Button3 from './Button3'
+import Input from './Input'
+import { ChangeEvent, useState } from 'react'
 
 const ButtonWrapper = () => {
+  const [userName, setUserName] = useState<string>('')
+
   function handleClick() {
     console.log('button clicked!')
   }
@@ -15,6 +19,10 @@ const ButtonWrapper = () => {
   function handleClick3(e: React.MouseEvent<HTMLButtonElement>, id: number) {
     console.log('event is', e)
     console.log('id is', id)
+  }
+
+  function handleChange(e: ChangeEvent<HTMLInputElement>) {
+    setUserName(e.target.value)
   }
   return (
     <section className="border-1 border-gray-300 p-5 rounded-2xl">
@@ -30,6 +38,13 @@ const ButtonWrapper = () => {
 
       <div className="my-4">
         <Button3 handleClick={handleClick3} />
+      </div>
+
+      <div>
+        <Input
+          value={userName}
+          handleChange={handleChange}
+        />
       </div>
     </section>
   )
