@@ -10,6 +10,10 @@ export default function LandingPage() {
           name="John"
           age={20}
         />
+
+        <Component>
+          <h3>There is no way I will quit!</h3>
+        </Component>
       </section>
     </div>
   )
