@@ -1,4 +1,6 @@
-const Component = ({ name, age }: { name: string; age: number }) => {
+type ComponentProps = { name: string; age: number }
+
+const Component = ({ name, age }: ComponentProps) => {
   return (
     <div>
       <strong>Name : </strong> {name}
