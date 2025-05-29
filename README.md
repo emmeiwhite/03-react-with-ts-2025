@@ -13,6 +13,8 @@
 
 ## Generic Type
 
+Generic Function which takes and returns same arguments
+
 ```ts
 function generate<T>(arg: T): T {
   return arg
@@ -21,4 +23,21 @@ function generate<T>(arg: T): T {
 console.log(generate<string>('hello world'))
 console.log(generate<number>(23))
 console.log(generate<boolean>(true))
+```
+
+Generic Interface
+
+```ts
+interface GenericInterface<T> {
+  value: T
+  getValue: () => T
+}
+const genericString: GenericInterface<string> = {
+  value: 'continue with TS/NextJS',
+  getValue() {
+    return this.value
+  }
+}
+
+console.log(genericString.getValue())
 ```
