@@ -1,4 +1,3 @@
-import Button from './components/Button'
 import ButtonWrapper from './components/ButtonWrapper'
 import Greet from './components/Greet'
 import Heading from './components/Heading'
@@ -30,7 +29,7 @@ export default function Home() {
   ]
 
   return (
-    <main className="max-w-6xl mx-auto py-3">
+    <main className="max-w-6xl mx-auto py-3 pb-4">
       {/* 1) Basic types */}
       <section className="border-1 border-gray-300 p-5 rounded-2xl mb-4">
         <h2 className="font-semibold text-2xl mb-2 py-3 text-green-700 ">1) Basic Types</h2>
