@@ -10,3 +10,15 @@
 ## Typing Props
 
 - Defining the structure of the props
+
+## Generic Type
+
+```ts
+function generate<T>(arg: T): T {
+  return arg
+}
+
+console.log(generate<string>('hello world'))
+console.log(generate<number>(23))
+console.log(generate<boolean>(true))
+```
