@@ -1,25 +1,18 @@
-import Component from './components2/Component'
-import StateAndEvents from './components3/StateAndEvents'
-
-const LandingPage = () => {
+import Component from './components3/Challenge5'
+const LandlingPage = () => {
   return (
-    <div className="max-w-6xl px-6 mx-auto">
-      {/* Basic Types */}
+    <div>
       <Component
-        name="John Doe"
-        age={45}
+        type="basic"
+        name="susan"
       />
 
       <Component
-        name="Rafia"
-        age={30}>
-        We are here!
-      </Component>
-
-      {/* State & Events */}
-
-      <StateAndEvents />
+        type="advanced"
+        name="John"
+        email="John@gmail.com"
+      />
     </div>
   )
 }
-export default LandingPage
+export default LandlingPage
