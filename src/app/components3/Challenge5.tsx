@@ -1,7 +1,10 @@
+const role: 'admin' | 'editor' | 'viewer' = 'admin' // Allowed.
+
+console.log(role)
 type ComponentProps = {
   name: string
   email?: string
-  type: string
+  type: 'advanced' | 'basic'
 }
 
 const Component = ({ name, email, type }: ComponentProps) => {
