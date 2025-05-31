@@ -1,4 +1,4 @@
-import Component from './components3/Challenge5'
+import Component from './components3/Challenge5Solution'
 const LandlingPage = () => {
   return (
     <div>

@@ -41,3 +41,17 @@ const genericString: GenericInterface<string> = {
 
 console.log(genericString.getValue())
 ```
+
+## 1. Discriminated Union
+
+A discriminated union based on the type field:
+
+```ts
+type Basic = { type: 'basic'; name: string }
+type Advanced = { type: 'advanced'; name: string; email: string }
+type ComponentProps = Basic | Advanced
+```
+
+💡 This tells TypeScript:
+
+“If type is `'advanced'`, then email must be present.”
