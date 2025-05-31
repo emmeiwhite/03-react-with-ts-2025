@@ -97,3 +97,43 @@ export const TourSchema = z.object({
 
 type Tour = z.infer<typeof TourSchema>
 ```
+
+## 🧠 Mental Model: Zod in React / Next.js
+
+┌────────────────────────────┐
+│ 1. Define Schema │
+│ "What should valid data │
+│ look like?" │
+└────────────────────────────┘
+↓
+
+- z.object({ ...shape })
+- z.string(), z.number(), z.array(), etc.
+
+                ↓
+
+┌────────────────────────────┐
+│ 2. Validate Incoming Data│
+│ "Is the API data matching │
+│ the expected shape?" │
+└────────────────────────────┘
+↓
+
+- z.array(Schema).safeParse(data)
+
+                ↓
+
+┌────────────────────────────┐
+│ 3. Use Parsed Data │
+│ Only use result.data if │
+│ result.success === true │
+└────────────────────────────┘
+
+| Concept                  | Mental Cue                           | Use When...                         |
+| ------------------------ | ------------------------------------ | ----------------------------------- |
+| `z.object({...})`        | "My data is an object"               | Validating a single item / shape    |
+| `z.array(...)`           | "I expect a list of items like this" | Validating list of objects          |
+| `safeParse(data)`        | "I’m not 100% sure if data is valid" | Safer than `.parse()` (won’t throw) |
+| `z.string().optional()`  | "This field might be missing"        | For optional fields                 |
+| `z.union([A, B])`        | "Field can be either A or B"         | Multiple valid shapes               |
+| `z.infer<typeof Schema>` | "I want the TypeScript type"         | Reuse schema shape as TS type       |
