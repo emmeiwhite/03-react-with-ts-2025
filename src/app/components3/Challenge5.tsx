@@ -1,4 +1,10 @@
-const role: 'admin' | 'editor' | 'viewer' = 'admin' // Allowed.
+type Role = 'admin' | 'editor' | 'viewer'
+
+let role: Role = 'admin' // Allowed.
+role = 'editor'
+role = 'viewer'
+
+// role = 'helper' Not allowed
 
 console.log(role)
 type ComponentProps = {
