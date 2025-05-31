@@ -1,17 +1,13 @@
-import Component from './components3/Challenge5Solution'
+import FetchData from './components4/FetchData'
+
 const LandlingPage = () => {
   return (
-    <div>
-      <Component
-        type="basic"
-        name="susan"
-      />
+    <div className="px-5 max-w-5xl mx-auto">
+      <h1 className="2xl mb-3">Fetch Data in Type Script</h1>
 
-      <Component
-        type="advanced"
-        name="John"
-        email="John@gmail.com"
-      />
+      <p>Let us see how it goes</p>
+
+      <FetchData />
     </div>
   )
 }
