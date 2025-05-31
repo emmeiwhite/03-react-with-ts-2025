@@ -57,3 +57,43 @@ type ComponentProps = Basic | Advanced
 “If type is `'advanced'`, then email must be present.”
 
 ## Fetch Data with TypeScript
+
+## ✅ What is Zod?
+
+Zod is a TypeScript-first schema validation library.
+It helps you:
+
+- ✅ Validate data at runtime (e.g., data from an API)
+
+- ✅ Parse/transform data safely
+
+- ✅ Automatically infer TypeScript types from your validation schemas
+
+### 🎯 Goal
+
+- ✅ Fetch the tour data
+
+- ✅ Validate it using Zod
+
+- ✅ Automatically infer TypeScript types
+
+- ✅ Safely pass to a client component
+
+### 🧱 Step-by-step with explanation:
+
+- 1. Install Zod (if not already installed)
+     `npm install zod`
+
+- 2. Create the Zod schema + inferred Type
+
+```ts
+export const TourSchema = z.object({
+  id: z.string(),
+  image: z.string(),
+  name: z.string(),
+  price: z.string(),
+  info: z.string()
+})
+
+type Tour = z.infer<typeof TourSchema>
+```
