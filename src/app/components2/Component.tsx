@@ -1,4 +1,8 @@
-type ComponentProps = { name: string; age: number; children: React.ReactNode }
+type ComponentProps = {
+  name: string
+  age: number
+  children?: React.ReactNode
+}
 
 const Component = ({ name, age, children }: ComponentProps) => {
   return (

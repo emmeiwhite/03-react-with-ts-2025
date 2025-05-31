@@ -1,20 +1,25 @@
 import Component from './components2/Component'
+import StateAndEvents from './components3/StateAndEvents'
 
-export default function LandingPage() {
+const LandingPage = () => {
   return (
-    <div className="bg-white">
-      <section className="max-w-6xl mx-auto px-5">
-        <h1>TypeScript + React</h1>
+    <div className="max-w-6xl px-6 mx-auto">
+      {/* Basic Types */}
+      <Component
+        name="John Doe"
+        age={45}
+      />
 
-        <Component
-          name="John"
-          age={20}
-        />
+      <Component
+        name="Rafia"
+        age={30}>
+        We are here!
+      </Component>
 
-        <Component>
-          <h3>There is no way I will quit!</h3>
-        </Component>
-      </section>
+      {/* State & Events */}
+
+      <StateAndEvents />
     </div>
   )
 }
+export default LandingPage
