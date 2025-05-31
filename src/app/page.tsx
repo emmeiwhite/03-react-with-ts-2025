@@ -1,4 +1,4 @@
-import FetchData from './components4/FetchData'
+import FetchDataWithZod from './components4/FetchDataWithZod'
 
 const LandlingPage = () => {
   return (
@@ -7,7 +7,7 @@ const LandlingPage = () => {
 
       <p>Let us see how it goes</p>
 
-      <FetchData />
+      <FetchDataWithZod />
     </div>
   )
 }
